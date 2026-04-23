@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countries API - פרוייקט מדינות</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="countries.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Countries API - פרוייקט מדינות</h1>
+        <div class="search-panel">
+            <input type="text" id="country-name" placeholder="search for a country...">
+            <button id="search-button" type="button">Search</button>
+        </div>
+        <div id="search-result" class="search-result"></div>
+        <div id="countries"></div>
+        <table id="country-table">
+            <tr align="left">
+                <th>Country Name</th>
+                <th>Capital</th>
+                <th>Population</th>
+                <th>Currency</th>
+                <th>Flag</th>
+            </tr>
+        </table>
+    </div>
+    <script src="countries.js"></script>
+</body>
+</html>

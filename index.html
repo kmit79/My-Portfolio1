@@ -11,22 +11,26 @@
 
     <nav>
         <ul>
-            <li><a href="#about">אודות</a></li>
-            <li><a href="#stack">ארגז כלים</a></li>
-            <li><a href="#contact">צור קשר</a></li>
+            <li><a href="#home"><i class="fas fa-home"></i> עמוד הבית</a></li>
+            <li><a href="#about"><i class="fas fa-user-circle"></i> אודות</a></li>
+            <li><a href="#stack"><i class="fas fa-tools"></i> ארגז כלים</a></li>
+            <li><a href="#projects"><i class="fas fa-folder-open"></i> פרויקטים</a></li>
+            <li><a href="#contact"><i class="fas fa-envelope"></i> צור קשר</a></li>
         </ul>
+        <div class="weather-widget">
+            <div id="weather-display">
+                <span id="weather-loading">
+                    <i class="fas fa-spinner fa-spin"></i> טוען מזג אוויר...
+                </span>
+            </div>
+        </div>
     </nav>
 
-    <header>
+    <header id="home">
         <h1>יבגני טאוש</h1>
-        <img src="mypicture.jpg" alt="My Image" width="200" height="200" style="border-radius: 50%; border: 3px solid var(--secondary-color); object-fit: cover;">
+        <img src="https://media.licdn.com/dms/image/v2/D4D03AQF1B3SSrFZ6gg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1664433581422?e=1778716800&v=beta&t=BXk-rjhWRKI4t20nDHnye21rwM0lXzj_yHtquyHlCtE" alt="My Image" width="200" height="200" style="border-radius: 50%; border: 3px solid var(--secondary-color); object-fit: cover;">
         <p>Full Stack Developer | Automation Engineer | Vibe Coder</p>
         <p>הופך רעיונות מורכבים לפתרונות תוכנה אלגנטיים.</p>
-        <div class="social-bar">
-            <!-- TODO: Replace '#' with your actual profile URLs -->
-            <a href="https://www.linkedin.com/in/eteush/" target="_blank" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
-            <a href="https://wa.me/972546775807" target="_blank" aria-label="Contact on WhatsApp"><i class="fab fa-whatsapp"></i></a>
-        </div>
     </header>
 
     <div class="container">
@@ -50,23 +54,126 @@
             </div>
         </section>
 
+        <section id="projects">
+            <h2>פרויקטים</h2>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3>פרויקט 1</h3>
+                    <p>רשימת משימות</p>
+                    <div class="project-buttons">
+                        <a href="Projects/ToDoList/todolist.html" class="btn btn-open" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> פתח
+                        </a>
+                        <a href="#" class="btn btn-download" download>
+                            <i class="fas fa-download"></i> הורד
+                        </a>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>פרויקט 2</h3>
+                    <p>מדינות - Countries API</p>
+                    <div class="project-buttons">
+                        <a href="Projects/CountriesAPI/countries.html" class="btn btn-open" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> פתח
+                        </a>
+                        <a href="#" class="btn btn-download" download>
+                            <i class="fas fa-download"></i> הורד
+                        </a>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="project-icon">
+                        <img src="https://cdn-icons-png.flaticon.com/512/17251/17251308.png" style="width: 2.2rem; height: 2.2rem;" alt="Game Icon"></span>
+                    </div>
+                    <h3>פרויקט 3</h3>
+                    <p>אוסף פוקמונים - Pokedex</p>
+                    <div class="project-buttons">
+                        <a href="Projects/PokedexAPI/pokedex.html" class="btn btn-open" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> פתח
+                        </a>
+                        <a href="#" class="btn btn-download" download>
+                            <i class="fas fa-download"></i> הורד
+                        </a>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="project-icon">
+                        <img src="https://cdn-icons-png.flaticon.com/512/5961/5961890.png" style="width: 2.2rem; height: 2.2rem;" alt="Game Icon"></span>
+                    </div>
+                    <h3>פרויקט 4</h3>
+                    <p>משחק איקס עיגול</p>
+                    <div class="project-buttons">
+                        <a href="Projects/TicTacToe/tictactoe.html" class="btn btn-open" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> פתח
+                        </a>
+                        <a href="#" class="btn btn-download" download>
+                            <i class="fas fa-download"></i> הורד
+                        </a>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-puzzle-piece"></i>
+                    </div>
+                    <h3>פרויקט 5</h3>
+                    <p>משחק פאזל תמונות</p>
+                    <div class="project-buttons">
+                        <a href="Projects/PuzzleGame/puzzlegame.html" class="btn btn-open" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> פתח
+                        </a>
+                        <a href="#" class="btn btn-download" download>
+                            <i class="fas fa-download"></i> הורד
+                        </a>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3>פרויקט 6</h3>
+                    <p>לומדת חשבון</p>
+                    <div class="project-buttons">
+                        <a href="Projects/MathLearn/mathlearn.html" class="btn btn-open" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> פתח
+                        </a>
+                        <a href="#" class="btn btn-download" download>
+                            <i class="fas fa-download"></i> הורד
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
         <hr style="margin: 50px 0; border: 0.5px solid var(--secondary-color);">
 
         <section id="contact">
             <h2>צור קשר</h2>
-            <form>
-                <input type="text" placeholder="שם מלא" required>
-                <input type="email" placeholder="אימייל" required>
-                <textarea rows="5" placeholder="איך אוכל לעזור לך?" required></textarea>
-                <button type="submit">שלח הודעה</button>
+            <form id="contact-form">
+                <input type="text" id="name" placeholder="שם מלא" required>
+                <input type="email" id="email" placeholder="אימייל" required>
+                <textarea id="message" rows="5" placeholder="איך אוכל לעזור לך?" required></textarea>
+                <button type="submit" id="submit-btn">שלח הודעה</button>
+                <div id="form-status" style="margin-top: 10px; display: none;"></div>
             </form>
         </section>
 
     </div>
 
     <footer style="text-align: center; padding: 40px; font-size: 0.8rem; opacity: 0.6;">
-        © 2026 יבגני טאוש. נבנה ברוח ה-Vibe Coding.
+        <div class="social-bar">
+            <!-- TODO: Replace '#' with your actual profile URLs -->
+            <a href="https://www.linkedin.com/in/eteush/" target="_blank" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
+            <a href="https://wa.me/972546775807" target="_blank" aria-label="Contact on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <p>© 2026 יבגני טאוש. נבנה ברוח ה-Vibe Coding.</p>
     </footer>
 
+    <script src="app.js"></script>
 </body>
 </html>

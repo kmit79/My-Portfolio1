@@ -1,0 +1,110 @@
+:root {
+    --bg-color: #0f172a;
+    --text-color: #f8fafc;
+    --accent-color: #8b5cf6; /* Purple Vibe */
+    --secondary-color: #334155;
+    /* Total puzzle size */
+    --puzzle-size: 300px; 
+    /* Size of each tile (300 / 3) */
+    --tile-size: 100px; 
+}
+
+body {
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Assistant', sans-serif;
+    direction: rtl;
+}
+
+.game-container {
+    text-align: center;
+}
+
+.controls-top {
+    margin-bottom: 15px;
+}
+
+.puzzle-board {
+    display: grid;
+    grid-template-columns: repeat(3, var(--tile-size));
+    grid-template-rows: repeat(3, var(--tile-size));
+    gap: 2px; /* Small gap between pieces */
+    background: var(--board-bg);
+    padding: 2px;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    /* Important to prevent image overflow */
+    width: calc(var(--puzzle-size) + 4px); 
+    height: calc(var(--puzzle-size) + 4px);
+    margin: 0 auto;
+}
+
+.tile {
+    width: var(--tile-size);
+    height: var(--tile-size);
+    /* Basic background settings */
+    background-repeat: no-repeat;
+    background-size: var(--puzzle-size) var(--puzzle-size); /* Background size is the full puzzle size */
+    cursor: pointer;
+    transition: transform 0.2s ease-out, box-shadow 0.2s;
+    position: relative;
+}
+
+/* Hover effect for pieces */
+.tile:hover:not(.empty) {
+    box-shadow: inset 0 0 15px rgba(255,255,255,0.5);
+    transform: scale(1.02);
+}
+
+/* The empty slot */
+.tile.empty {
+    background: #cbd5e0 !important; /* Neutral gray color */
+    cursor: default;
+    box-shadow: none;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 25px;
+    font-size: 1.2rem;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background-color: #2b6cb0;
+}
+
+#message {
+    margin-top: 15px;
+    font-size: 1.3rem;
+    color: #2f855a;
+    font-weight: bold;
+    min-height: 1.4em;
+}
+
+.tile[data-number]::after {
+    content: attr(data-number); /* Pulls the number from HTML attribute */
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 2px 6px;
+    border-radius: 50%;
+    font-size: 12px;
+    opacity: 0; /* Hidden by default, toggled via .show-hints */
+    transition: opacity 0.3s;
+}
+
+.show-hints .tile::after {
+    opacity: 1; /* Displayed when the show-hints class is added */
+}

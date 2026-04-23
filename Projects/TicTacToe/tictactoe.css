@@ -1,0 +1,74 @@
+/* Tic Tac Toe Specific Styles */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    text-align: center;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: var(--secondary-color);
+    border: 2px solid var(--accent-color);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cell:hover {
+    background-color: rgba(139, 92, 246, 0.1);
+    transform: scale(1.05);
+}
+
+.cell.x::before,
+.cell.o::before {
+    font-size: 3rem;
+}
+
+.cell.x::before {
+    content: 'X';
+    color: var(--accent-color);
+}
+
+.cell.o::before {
+    content: 'O';
+    color: var(--text-color);
+}
+
+#game-board.x .cell:not(.x):not(.o):hover::before {
+    content: 'X';
+    color: var(--accent-color);
+    opacity: 0.3;
+}
+
+#game-board.o .cell:not(.x):not(.o):hover::before {
+    content: 'O';
+    color: var(--text-color);
+    opacity: 0.3;
+}
+#status-text {
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+#restart-button {
+    margin-top: 20px;
+    width: auto;
+}

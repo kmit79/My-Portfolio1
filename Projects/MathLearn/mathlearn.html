@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>לומדת חשבון</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="MathLearn.css">
+</head>
+<body>
+<div class="app-container">
+    <div id="times-up-overlay" class="times-up-overlay hidden">זמנך עבר! ⏰</div>
+    <div class="timer">זמן נותר: <span id="time-left">15</span></div>
+    <h1>לומדת חשבון</h1>
+    <span class="score">ניקוד: 0</span>
+
+    <main class="math-card">
+        <div class="mascot">🤔</div>
+        <div class="question">
+            <span class="num">12</span>
+            <span class="operator">×</span>
+            <span class="num">4</span>
+            <span class="operator">=</span>
+            <div class="answer-box">?</div>
+        </div>
+    </main>
+
+    <section class="controls">
+        <div class="numpad">
+            <button>1</button><button>2</button><button>3</button>
+            <button>4</button><button>5</button><button>6</button>
+            <button>7</button><button>8</button><button>9</button>
+            <button class="clear">C</button><button>0</button>
+            <button class="submit">בדיקה</button>
+        </div>
+    </section>
+</div>
+
+<script src="MathLearn.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>פאזל מספרים</title>
+    <link rel="stylesheet" href="..\..\style.css">
+    <link rel="stylesheet" href="puzzlegame.css">
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>פאזל תמונות</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="game-container">
+    <h1>פאזל תמונות</h1>
+        
+    <div class="controls-top">
+        <label for="imageSelect">בחר תמונה:</label>
+        <select id="imageSelect" onchange="changeImage()">
+            <option value="https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?q=80&w=400">גור חמוד</option>
+            <option value="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=400">חוף ים</option>
+            <option value="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=400">נוף הרים</option>
+        </select>
+    </div>
+
+    <div class="toggle-container">
+        <span>הצג רמזים:</span>
+        <label class="switch">
+            <input type="checkbox" id="hintToggle" onchange="toggleHints()">
+            <span class="slider round"></span>
+        </label>
+    </div>
+
+    <div id="board" class="puzzle-board"></div>
+    <div id="message"></div>
+    <button onclick="shuffleGame()">משחק חדש</button>
+</div>
+
+<script src="puzzlegame.js"></script>    
+</body>
+</html>
